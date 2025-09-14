@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Wellness Made Simple</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <!-- ============================================ -->
+  <!--                 Navigation                   -->
+  <!-- ============================================ -->
+
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <!-- Text Logo -->
+      <a href="index.html" class="cs-logo" aria-label="GreenBite Home">GreenBite</a>
+
+      <!-- Nav -->
+      <nav class="cs-nav" role="navigation">
+        <!-- Mobile Toggle -->
+        <button class="cs-toggle" aria-label="mobile menu toggle">
+          <div class="cs-box">
+            <span class="cs-line cs-line1"></span>
+            <span class="cs-line cs-line2"></span>
+            <span class="cs-line cs-line3"></span>
+          </div>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li"><a href="index.html" class="cs-li-link">Home</a></li>
+            <li class="cs-li"><a href="recipes.html" class="cs-li-link cs-active">Healthy Recipes</a></li>
+            <li class="cs-li"><a href="calculator.html" class="cs-li-link">C&N Calculator</a></li>
+            <li class="cs-li"><a href="workout.html" class="cs-li-link">Workout Generator</a></li>
+            <li class="cs-li"><a href="mindfulness.html" class="cs-li-link">Mindfulness</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="contact.html" class="cs-button-solid cs-nav-button">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Spacer so content isn't hidden by fixed nav -->
+  <div class="navbar-spacer"></div>
+
+  <!-- Page Content -->
+  <main>
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-856">
+    <div class="cs-container">
+        <div class="cs-content" data-animate="fade-up">
+            <span class="cs-topper">EAT WELL, FEEL BETTER</span>
+            <h1 class="cs-title">Healthy Recipes You’ll Actually Cook</h1>
+            <p class="cs-text">
+                Balanced, budget-friendly meals with full macros and prep time. Cook in 15–30 minutes, batch on weekends, and fuel your day without the guesswork.
+            </p>
+            <a href="" class="cs-button-solid">Explore Recipes</a>
+        </div>
+        <!--Hero Image-->
+         <picture class="cs-picture">
+        <!--Mobile-->
+          <source media="(max-width: 600px)" srcset="img/recipe_hero.jpg">
+        <!--Tablet-->
+          <source media="(min-width: 601px)" srcset="img/recipe_hero.jpg">
+        <!--Desktop-->
+          <source media="(min-width: 1024px)" srcset="img/recipe_hero.jpg">
+          <img aria-hidden="true" decoding="async" src="img/recipe_hero.jpg" alt="food" width="570" height="701">
+         </picture>
+    </div>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<!--
+    To add a 4th or 5th collection or more, copy and paste the cs-button and change it's data-filter to the next number, in this case it's 4. Do the same to the cs-listing and its data-category number. And that's it!
+-->
+
+<section id="collection-1602">
+  <div class="cs-container">
+    <div class="cs-content" data-animate="fade-up">
+      <h2 class="cs-title">Healthy Recipes</h2>
+
+      <!-- Search -->
+      <div class="cs-button-group" style="gap:.75rem; flex-wrap:wrap;">
+        <input id="recipe-search" type="search" placeholder="Search by name..."
+               aria-label="Search recipes by name"
+               style="height:2.75rem; padding:0 .9rem; border:1px solid #dad9e3; border-radius:.5rem; min-width:16rem;">
+      </div>
+
+      <!-- Filters -->
+      <div class="cs-button-group" aria-label="Filter recipes by category">
+        <button class="cs-button cs-active" data-filter="all">All</button>
+        <button class="cs-button" data-filter="breakfast">Breakfast</button>
+        <button class="cs-button" data-filter="lunch">Lunch</button>
+        <button class="cs-button" data-filter="dinner">Dinner</button>
+        <button class="cs-button" data-filter="snack">Snack</button>
+        <button class="cs-button" data-filter="vegetarian">Vegetarian</button>
+      </div>
+    </div>
+
+    <!-- Cards list (JS injects here) -->
+    <div class="cs-listing-wrapper">
+      <div id="recipe-list" class="cs-listing">
+        <!-- JS renders cards here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Native dialog modal -->
+<dialog id="recipe-dialog" aria-labelledby="recipe-title" style="max-width:min(900px,90vw); border:none; border-radius:1rem; padding:0; overflow:hidden;">
+  <form method="dialog">
+    <div style="display:flex; flex-direction:column;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid #e8e8e8;">
+        <h3 id="recipe-title" style="margin:0; font-weight:900; color:#1a1a1a;">Recipe</h3>
+        <button value="close" aria-label="Close" style="border:1px solid #dad9e3; background:#fff; padding:.4rem .7rem; border-radius:.5rem; cursor:pointer;">Close</button>
+      </div>
+      <div id="recipe-body" style="padding:1rem 1.25rem; max-height:70vh; overflow:auto;"></div>
+    </div>
+  </form>
+</dialog>
+
+
+                                
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-697">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Questions About a Swap or Macros? We’ve Got You</h2>
+            <a href="contact.html" class="cs-button-solid">Get In Touch</a>
+        </div>
+    </div>
+</section>
+  </main>
+
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1292" data-animate="fade-up">
+  <div class="cs-container">
+
+    <!-- Logo Group -->
+       <div class="cs-logo-group">
+        <a aria-label="go back to home" class="cs-logo" href="index.html">
+           <span class="cs-logo-text">GreenBite</span>
+        </a>
+           <p class="cs-text">
+              GreenBite empowers you to eat better, move more, and live mindfully one small step at a time.
+           </p>
+           <a href="mailto:info@greenbite.com" class="cs-link">
+              <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/construction-mail.svg" alt="icon" width="24" height="24">
+                 info@greenbite.com
+           </a>
+       </div>
+
+
+    <!-- Links -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Quick Links</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="recipes.html">Healthy Recipes</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="calculator.html">Calculator</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="workout.html">Workout</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="mindfulness.html">Mindfulness</a></li>
+    </ul>
+
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Contact</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">Facebook</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">Instagram</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">LinkedIn</a></li>
+    </ul>
+
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Help</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">FAQ</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="contact.html">Contact us</a></li>
+    </ul>
+  </div>
+
+  <div class="cs-bottom">
+    <span class="cs-copyright">Copyright© 2025.
+      <a class="cs-copyright-link" href="index.html">GreenBite.</a>
+      All Right Reserved.
+    </span>
+    <a href="" class="cs-copyright-link">Terms of Service</a>
+    <a href="" class="cs-copyright-link">Privacy Policy</a>
+  </div>
+</footer>
+  <script src="js/nav.js"></script>
+  <script src="js/recipes.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>

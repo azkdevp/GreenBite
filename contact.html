@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Wellness Made Simple</title>
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <!-- ============================================ -->
+  <!--                 Navigation                   -->
+  <!-- ============================================ -->
+
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <!-- Text Logo -->
+      <a href="index.html" class="cs-logo" aria-label="GreenBite Home">GreenBite</a>
+
+      <!-- Nav -->
+      <nav class="cs-nav" role="navigation">
+        <!-- Mobile Toggle -->
+        <button class="cs-toggle" aria-label="mobile menu toggle">
+          <div class="cs-box">
+            <span class="cs-line cs-line1"></span>
+            <span class="cs-line cs-line2"></span>
+            <span class="cs-line cs-line3"></span>
+          </div>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li"><a href="index.html" class="cs-li-link">Home</a></li>
+            <li class="cs-li"><a href="recipes.html" class="cs-li-link">Healthy Recipes</a></li>
+            <li class="cs-li"><a href="calculator.html" class="cs-li-link">C&N Calculator</a></li>
+            <li class="cs-li"><a href="workout.html" class="cs-li-link">Workout Generator</a></li>
+            <li class="cs-li"><a href="mindfulness.html" class="cs-li-link">Mindfulness</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="contact.html" class="cs-button-solid cs-nav-button">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Spacer so content isn't hidden by fixed nav -->
+  <div class="navbar-spacer"></div>
+
+  <!-- Page Content -->
+  <main>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-2320">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get In Touch With GreenBite Team</h2>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-323-2320" name="Contact Form" method="post">
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" name="name" placeholder="Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" name="email" placeholder="Email">
+                </label>
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="tel" name="phone" placeholder="Phone">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required name="Message" placeholder="Write message..."></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+            </form>
+        </div>
+        <!--Map Image, pin is made in the Figma then export as one image-->
+        <div class="cs-map">
+            <div class="cs-iframe-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172153.33373691145!2d-122.33979794999999!3d47.608715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102c93e83355%3A0x102565466944d59a!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1739169879796!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-1466">
+    <div class="cs-container">
+        <picture class="cs-picture">
+         <!-- Mobile -->
+         <source media="(max-width: 600px)" srcset="img/faq.jpg">
+         <!-- Tablet & up -->
+         <source media="(min-width: 601px)" srcset="img/faq.jpg">
+         <img loading="lazy" decoding="async" src="img/faq.jpg" alt="FAQ illustration" width="522" height="609" aria-hidden="true">
+        </picture>
+
+        <div class="cs-content">
+            <span class="cs-topper">Asked Questions</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How do I track my daily nutrition intake?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Use our Calorie & Nutrition Calculator to get daily macro targets and track your meals. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Are the workout plans suitable for beginners?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes. We generate progressive plans and focus on good form with gradual increases. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How often should I practice mindfulness exercises?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Start with 5–10 minutes daily; consistency beats duration. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Is my data stored securely?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Personal data is saved only in your browser (localStorage) and never shared.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How accurate are the calorie calculations?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Our calculator uses the scientifically-validated Mifflin-St Jeor equation for BMR calculation. However, individual metabolic rates can vary, so use these as starting points and adjust based on your results.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+        
+
+  </main>
+
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-1292">
+  <div class="cs-container">
+
+    <!-- Logo Group -->
+       <div class="cs-logo-group">
+        <a aria-label="go back to home" class="cs-logo" href="index.html">
+           <span class="cs-logo-text">GreenBite</span>
+        </a>
+           <p class="cs-text">
+              GreenBite empowers you to eat better, move more, and live mindfully one small step at a time.
+           </p>
+           <a href="mailto:info@greenbite.com" class="cs-link">
+              <img class="cs-link-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/construction-mail.svg" alt="icon" width="24" height="24">
+                 info@greenbite.com
+           </a>
+       </div>
+
+
+    <!-- Links -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Quick Links</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="recipes.html">Healthy Recipes</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="calculator.html">Calculator</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="workout.html">Workout</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="mindfulness.html">Mindfulness</a></li>
+    </ul>
+
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Contact</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">Facebook</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">Instagram</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">LinkedIn</a></li>
+    </ul>
+
+    <ul class="cs-nav">
+      <li class="cs-nav-li"><span class="cs-header">Help</span></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="">FAQ</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="contact.html">Contact us</a></li>
+    </ul>
+  </div>
+
+  <div class="cs-bottom">
+    <span class="cs-copyright">Copyright© 2025.
+      <a class="cs-copyright-link" href="index.html">GreenBite.</a>
+      All Right Reserved.
+    </span>
+    <a href="" class="cs-copyright-link">Terms of Service</a>
+    <a href="" class="cs-copyright-link">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+<script src="js/contact.js"></script>
+<script src="js/effects.js"></script>
+</html>
